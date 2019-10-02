@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Orca Forum: Veirs presentation</title>
+  <title>Ship Noise Workshop: Veirs presentation</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -28,6 +28,16 @@
 
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
+
+
+<style type="text/css">
+  .highlight-red {color: red}
+  .highlight-yellow {color: yellow}
+  mark {
+    background-color: black;
+  }
+</style>
+
 </head>
 
 <body>
@@ -40,102 +50,115 @@
 	      	<h2>WA Waters - existing hydrophone network</h2>
 	      	<img src="content/orca-ferry.png">
 	      	<h3>Scott Veirs, Orcasound hydrophone network</h3>
-	      	<h4>Ship noise workshop</br>Oct 3, 2019, Seattle</h4>
+	      	<h4>Ship noise workshop on Oct 3, 2019, in Seattle</h4>
 	      	<div>
 			<audio preload="auto" controls="controls">
-	            		<source src="content/sounds/clear-calls-clicks.mp3" type="audio/mpeg">
+	            	<source src="content/sounds/clear-calls-clicks.mp3" type="audio/mpeg">
 	      		</audio>
-			</div>
-	  		Slides at: <a href="http://orcasound.net/talks/2019-Seattle-shipnoise-workshop">orcasound.net/talks</a>
-  		</center>
+		</div>
+	  	Slides at: <a href="http://orcasound.net/talks/2019-Seattle-shipnoise-workshop">orcasound.net/talks</a>
+    </center>
     </section>
 
     <section class="slide">
-	      	<h2>Existing hydrophone network and assets</h2>
-		<h5>Focus on: in WA; 24/7 real-time audio data infrastructure</h5>
-		<center>
+	      	<h2>Existing hydrophone network<br>Assets that could help implement Rec. #22</h2>
+		<h3>Outline (focus on real-time assets in WA):</h5>
 		<ol>
-		<li>Non-Wa, Non-Orcasound assets you should know about
+		<li>Non-WA, Non-Orcasound assets you should know about
 		<li>Orcasound: a tool for SRKW+ research, management, <b>and</b> education
 		<li>Orcasound: a tool for characterizing underwater noise in SRKW critical habitat
 		<li>Orcasound: a partner (with PSEMP and you!) in tracking <b>Puget Sound</b> wildlife
 		</ol>
-  		</center>
-<h5>Me: UW Oceanography, PhD (2003); 15+ years SRKW bioacoustic research/teaching and coordinating Orcsound; Chair of Marine Mammal Work Group within the Puget Sound Ecosystem Monitoring Program.
+<h5>About me:</h5>
+<ul>
+<li>UW Oceanography, PhD (2003)
+<li>15+ years SRKW bioacoustic research/teaching and coordinating Orcasound
+<li>Chair of Marine Mammal Work Group within the Puget Sound Ecosystem Monitoring Program
+</ul>
     </section>
 
 
     <section class="slide">
-	      	<h2>Assets I won't cover</h2>
-		<h5>Because they're not 24/7 and/or real-time audio data sources</h5>
-		<center>
-		<ol>
-		<li>thumbnail grid as html table?
-		<li>
-		<li>
-		<li>
-		</ol>
-  		</center>
-    </section>
-
-
-    <section class="slide">
-	      	<h2>Assets that could leverage Orcasound tech</h2>
-		<h5>Because they're sources of near-real-time audio data</h5>
-		<center>
-		<ol>
-		<li>Map of NE Pac (mostly cabled, near-real-time)
-		<li>Embed or screenshot(s)
-		<li>
-		<li>
-		</ol>
-  		</center>
+	      	<h2>Assets I can't cover in depth (but may be relevant)</h2>
+		<h5></h5>
+		<ul>
+		<li>Other cabled, real-time hydrophone assets in the Northeast Pacific
+			<ol>
+			<li>Substantial (~$10M/yr) Canadian whale tracking infrastructure (ONC, DFO, ECHO, SIMRES, Orca Lab, Pacific Wild, Cetacea Lab, etc.)	
+			<li>Outer coast U.S. assets (OOI Newport node, MARS)
+			</ol>
+		<li>Autonomous recorders or other non-real-time hydrophones
+			<ol>
+			<li>Critical habitat NOAA assets (PALs, EARS, etc.)
+			<li>Many past deployments in SRKW habitat (APL/PALs, MARUs, HARPs, ULS, SoundTraps, etc.)
+			</ol>
+		<li>Other real-time sources of SRKW detections and/or non-cabled audio
+			<ol>
+			<li>Wavegliders (humpbacks)
+			<li>SMRU CABs
+			<li>Canadian radar, thermal cameras, machine learning
+			</ol>
+		<li>Vast and growing network of Salish Sea marine sensors, e.g. gliders (NANOOS/NVS)
+		</ul>
     </section>
 
 
     <section class="slide">
 	      	<h2>Orcasound</h2>
 		<h5>An evolving tool for SRKW conservation</h5>
-		The product of 15 years of citizen scientists listening for whales in the Salish Sea...
-
-		<center>
-		<ol>
-		<li>STATE HOW RELATED TO #22
-		<li>Updated Roadmap Graphic? (focus on real-time analysis and notifications)
-		<li>Orcasound lab w/NOAA funding, edge AI, & email list -> cooperative hydrophone network with Google sheet & social networks -> open-source hardware/software project with cloud-based data and growing community
-		</ol>
 		<img src="content/hydrophone-headphone-roadmap.png">
-  		</center>
+		<p>The product of 15 years of citizen scientists listening for whales, Orcasound is now a cooperative hydrophone network and an innovative open-source hardware/software project.
     </section>
 
 
     <section class="slide">
                 <h2>Orcasound funding history and future</h2>
-                <h5></h5>
+                <h5>From NOAA/WDFW contracts/grants to crowd-funding, philanthropy, and hackathons</h5>
                 <center>
-                <img src="content/">
+                <img src="content/funding-history.png">
                 </center>
     </section>  
 
 
-    <section class="slide">
-                <h2>Orcasound current map and membership</h2>
-                <h5>New OS map within http://orcasound.net/data/talks/2018-asa-sveirs/#slide-1</h5>
-current map (l) and member list (or logo grid) on right?
-                <center>
-                <img src="content/">
-                </center>
-From http://orcasound.net/data/talks/2018-asa-sveirs/#slide-1
-You can join Orcasound, too!
-Just e-sign the MOA and heed the
-Creative Commons (share-alike, attribution, non-commercial) license.
+ <section class="slide">
+      <h2>Orcasound 2019-2020 map and membership</h2>
+      <h5>Cooperative of researchers, educators, & citizen scientists</h5>
+<table>
+<col style="width:50%">
+<col style="width:50%">
+<tr>
+<td>
+<ol>
+<li> Orca Network	 
+<li> Port Townsend Marine Science Center
+<li> Beam Reach & Colorado College 	
+<li> The Center for Whale Research
+<li> The Whale Trail	
+<li> Oceans Initiative	
+<li> Orca Behavior Institute	 
+<li> Whale Scout	 
+<li> Deep Green Wilderness	
+<li> Friends of Lime Kiln Society (FOLKS)	
+<li> Cetacean Research Technology	 
+</ol>
+<p>5 physical exhibits: </b> Seattle Aquarium; Port Townsend Marine Science Center; Langley Whale Center; Lime Kiln Visitor's Center (via FOLKS)</p>
+</td>
+<td>
+<center>
+<mark><span style="color:red;">Past</span> | <span style="color:green;">Current</span> | <span style="color:yellow;">Planned (2020)</span></mark>
+        <img src="content/2020map.png"><p>
+</center>
+</td>
+</tr>
+</table>
+      <p>You can <a href="http://www.orcasoud.net/join/">join Orcasound</a>, too! Just e-sign the <a href="https://docs.google.com/document/d/1OdKOICgPNHy7CkaHjzWMztH_zNir4UlbZbOdKtyRwI0/edit">MOA</a> and heed the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons license</a>.</p>
     </section>
 
 
     <section class="slide">
                 <h2>Orcasound hardware evolution</h2>
-                <h5>Can we deploy a hydrophone node for less than $1000 (U.S.)?</h5>
-<h4>Basic ingredients (and costs):</h4>
+                <h5>A hydrophone node for less than $1000 (U.S.)!</h5>
+<p>Basic ingredients (and costs):</p>
 <table>
 <tr>
 <td>
@@ -144,12 +167,12 @@ Creative Commons (share-alike, attribution, non-commercial) license.
                 <li>($300 x2) Hydrophones -- dual for redundancy, stereo listening, and bearing determination</li>
                 <li>($125) Pisound board -- 48/96/192 kHz per channel, stereo 24-bit ADC </li>
                 <li>($ 35) Raspberry Pi 3b+ -- single board computer (1.4GHz 64-bit quad-core processor)</li>
-                <li>($ 35) Audio cables and a waterproof box installed near the shoreline</li>
+                <li>($ 35) Audio cables & waterproof box installed near the shoreline</li>
                 <li>($ 75) Power over Ethernet -- from the box to a 24-hour UPS and Internet router</li>
               </ul>
-<h4>60% of cost of binaural listening is hydrophones! (>75% for least expensive research-grade)</h4>
+<h4>60% of cost is hydrophones! (>75% for low-cost research node)</h4>
 
-<p><a href="http://www.orcasound.net/2018/04/27/orcasounds-new-live-audio-solution-from-hydrophone-to-headphone-with-a-raspberry-pi-computer-and-hls-dash-streaming-software/">DIY: How to build your own hydrophone node!</a>
+<p><a href="http://www.orcasound.net/2018/04/27/orcasounds-new-live-audio-solution-from-hydrophone-to-headphone-with-a-raspberry-pi-computer-and-hls-dash-streaming-software/">DIY Guide: How to build your own hydrophone node!</a>
 </td>
         <td><img src="content/node-box.png" height="400"></td>
 </tr>
