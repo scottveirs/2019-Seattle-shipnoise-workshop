@@ -37,18 +37,426 @@
 
     <section class="slide">
       	<center>
-	      	<h2>Impacts of underwater noise on orcas</h2>
+	      	<h2>WA Waters - existing hydrophone network</h2>
 	      	<img src="content/orca-ferry.png">
 	      	<h3>Scott Veirs, Orcasound hydrophone network</h3>
-	      	<h4>Clallam MRC Orca Forum</br>May 10, 2019, Port Angeles</h4>
+	      	<h4>Ship noise workshop</br>Oct 3, 2019, Seattle</h4>
 	      	<div>
 			<audio preload="auto" controls="controls">
 	            		<source src="content/sounds/clear-calls-clicks.mp3" type="audio/mpeg">
 	      		</audio>
 			</div>
-	  		Slides at: <a href="http://orcasound.net/talks/2019-orca-forum">orcasound.net/talks</a>
+	  		Slides at: <a href="http://orcasound.net/talks/2019-Seattle-shipnoise-workshop">orcasound.net/talks</a>
   		</center>
     </section>
+
+    <section class="slide">
+	      	<h2>Existing hydrophone network and assets</h2>
+		<h5>Focus on: in WA; 24/7 real-time audio data infrastructure</h5>
+		<center>
+		<ol>
+		<li>Non-Wa, Non-Orcasound assets you should know about
+		<li>Orcasound: a tool for SRKW+ research, management, <b>and</b> education
+		<li>Orcasound: a tool for characterizing underwater noise in SRKW critical habitat
+		<li>Orcasound: a partner (with PSEMP and you!) in tracking <b>Puget Sound</b> wildlife
+		</ol>
+  		</center>
+<h5>Me: UW Oceanography, PhD (2003); 15+ years SRKW bioacoustic research/teaching and coordinating Orcsound; Chair of Marine Mammal Work Group within the Puget Sound Ecosystem Monitoring Program.
+    </section>
+
+
+    <section class="slide">
+	      	<h2>Assets I won't cover</h2>
+		<h5>Because they're not 24/7 and/or real-time audio data sources</h5>
+		<center>
+		<ol>
+		<li>thumbnail grid as html table?
+		<li>
+		<li>
+		<li>
+		</ol>
+  		</center>
+    </section>
+
+
+    <section class="slide">
+	      	<h2>Assets that could leverage Orcasound tech</h2>
+		<h5>Because they're sources of near-real-time audio data</h5>
+		<center>
+		<ol>
+		<li>Map of NE Pac (mostly cabled, near-real-time)
+		<li>Embed or screenshot(s)
+		<li>
+		<li>
+		</ol>
+  		</center>
+    </section>
+
+
+    <section class="slide">
+	      	<h2>Orcasound</h2>
+		<h5>An evolving tool for SRKW conservation</h5>
+		The product of 15 years of citizen scientists listening for whales in the Salish Sea...
+
+		<center>
+		<ol>
+		<li>STATE HOW RELATED TO #22
+		<li>Updated Roadmap Graphic? (focus on real-time analysis and notifications)
+		<li>Orcasound lab w/NOAA funding, edge AI, & email list -> cooperative hydrophone network with Google sheet & social networks -> open-source hardware/software project with cloud-based data and growing community
+		</ol>
+		<img src="content/hydrophone-headphone-roadmap.png">
+  		</center>
+    </section>
+
+
+    <section class="slide">
+                <h2>Orcasound funding history and future</h2>
+                <h5></h5>
+                <center>
+                <img src="content/">
+                </center>
+    </section>  
+
+
+    <section class="slide">
+                <h2>Orcasound current map and membership</h2>
+                <h5>New OS map within http://orcasound.net/data/talks/2018-asa-sveirs/#slide-1</h5>
+current map (l) and member list (or logo grid) on right?
+                <center>
+                <img src="content/">
+                </center>
+From http://orcasound.net/data/talks/2018-asa-sveirs/#slide-1
+You can join Orcasound, too!
+Just e-sign the MOA and heed the
+Creative Commons (share-alike, attribution, non-commercial) license.
+    </section>
+
+
+    <section class="slide">
+                <h2>Orcasound hardware evolution</h2>
+                <h5>Can we deploy a hydrophone node for less than $1000 (U.S.)?</h5>
+<h4>Basic ingredients (and costs):</h4>
+<table>
+<tr>
+<td>
+ 	<ul>
+                <li>($ 50) DIY hydrophone stand</li>
+                <li>($300 x2) Hydrophones -- dual for redundancy, stereo listening, and bearing determination</li>
+                <li>($125) Pisound board -- 48/96/192 kHz per channel, stereo 24-bit ADC </li>
+                <li>($ 35) Raspberry Pi 3b+ -- single board computer (1.4GHz 64-bit quad-core processor)</li>
+                <li>($ 35) Audio cables and a waterproof box installed near the shoreline</li>
+                <li>($ 75) Power over Ethernet -- from the box to a 24-hour UPS and Internet router</li>
+              </ul>
+<h4>60% of cost of binaural listening is hydrophones! (>75% for least expensive research-grade)</h4>
+
+<p><a href="http://www.orcasound.net/2018/04/27/orcasounds-new-live-audio-solution-from-hydrophone-to-headphone-with-a-raspberry-pi-computer-and-hls-dash-streaming-software/">DIY: How to build your own hydrophone node!</a>
+</td>
+        <td><img src="content/node-box.png" height="400"></td>
+</tr>
+</table>
+    </section>
+
+
+    <section class="slide">
+      <h2>Orcasound software evolution</h2>
+<h5>Can we make it easy to listen and scalable with cloud-based archive & analysis?</h5>
+
+<h3>Can free open-source software stream audio to all devices/browsers?</h3>
+<ul>
+<li>Linux (Raspian), Docker (container), <a href="dataplicity.com">Dataplicity</a> (remote access), and soon Resin.io (for deployment)
+<li><b>ffmpeg</b> -- encodes audio data (compressed stream and/or lossless archive) in two formats:
+<ul>
+<li>Compressed & lossy: HLS segments (<a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming">HTTP Live Streaming</a>)</li>
+<li>Compressed, lossless: FLAC (<a href="https://xiph.org/flac/">Free Lossless Audio Codec</a>)</li>
+</ul>
+        <img src="content/screenshot-s3.png" height="400" align="right"><p>
+<h3>How do we archive data in the cloud?</h3>
+<ul>
+<li><b>s3fs</b> -- uploads data files and "manifest" to Amazon’s Simple Storage Services (S3)</li>
+<li>FLAC filenames contain UTC timestamp</li>
+</ul>
+
+<p><a href="https://github.com/orcasound/orcanode">Orcanode Github repository</a></p>
+    </section>
+
+
+
+    <section class="slide">
+        <h2>What's next for Orcasound?</h2>
+	<h5>Make “listening for whales” interactive and inform real-time end-users</h5>
+(demo beta UI? Backup: screenshot of beta UI and admin panel [and marine traffic and M2?!])
+
+        <center>
+        <h4>For free live-listening, browse to:<br><a href="http://live.orcasound.net">live.orcasound.net</a></h4>
+
+        <table>
+        <col style="width:50%">
+        <col style="width:25%">
+        <col style="width:25%">
+          <tr align="center">
+            <td><img src="content/screenshot-live-tall.png" height="400" hspace="10"></td>
+            <td>v2 UI screengrab</td>
+            <td>v2 admin screengrab</td>
+          </tr>
+        </table>
+        </center>
+        <p> Orcasound 1.0 player published Nov. 1, 2018. Orcasound 2.0 is in beta-testing and expected to go live in fall, 2019.</p>
+    </section>
+
+    <section class="slide">
+	<h2>Orcasound as a tool characterizing vessel noise</h2>
+	<h5>Vessel noise can mask <b><u>both</u></b> calls &amp; clicks</h5>
+      <table>
+        <tr>
+          <td width="50%">
+            <img src="content/peerJ_RL.png" width="600" align="left">
+            <h4>Frequencies of vessel noise overlap <br>with SRKW hearing and signals</h4>
+            <center>
+            <p>Veirs, Veirs, & Wood (<a href="https://peerj.com/articles/1657/">2016, PeerJ</a>)</p>
+            <p>Typical ship:
+                <audio preload="auto" controls="controls">
+                    <source src="content/sounds/ship-clattering.mp3" type="audio/mpeg">
+                </audio>
+            </p>
+            </center>
+         </td>
+         <td>
+            <img src="content/freq-fig.jpg">
+            <p>Squeaky ship:
+                <audio preload="auto" controls="controls">
+                    <source src="content/sounds/squeaky-ship.mp3" type="audio/mpeg" title="squeaky ship">
+                </audio>
+            </p>
+         </td>
+       </tr>
+     </table>
+    </section>
+
+
+    <section class="slide">
+        <h2>Vessel noise mitigation</h2>
+        <h5 text-align="center">There are many ways to "more than mitigate" vessel noise.</h5>
+        <center>
+        <table><tr><td width="50%">
+        <img src="content/class-spectra.png"
+        </td><td width="5%">
+        </td><td>
+        <img src="content/preprint-3dB.png"
+        </td></tr></table>
+        <p>
+         Operational (temporary) and technological (permanent)
+        </center>
+    </section>
+
+
+        <section class="slide">
+          <h2>Broadband received level peaks</h2>
+          <h5>Ships and boats have similar maxima, but ships last longer</h5>
+          <img src="content/65_JD_2458046_2017-10-19_hrs__to_12.jpg">
+        </section>
+
+        <section class="slide">
+          <h2>Peak validation example: 2 ships, boats, & SRKWs</h2>
+          <h5>Compared to fast boats, slow ones have lower maxima, and sometimes last longer</h5>
+          <img src="content/9_27_8am.jpg"  alt="">
+          Smooth curve (black) is 1200-second running average broadband dB level
+        </section>
+
+       <section class="slide">
+        <h2>Proposal for new acoustic metrics</h2>
+        <h3>Urban ambient noise level: a baseline for "delta" noise metrics for SRKWs</h3>
+        <img src="content/dBmaxVS_width.jpg">
+        <p><i>Holt et al., 2017, Endangered Species Research</i></p>
+        </section>
+
+
+    <section class="slide">
+        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
+        <h5>Together we can detect and protect the SRKW (with cool tech, like...)</h5>
+      <center>
+      <table>
+        <tr>
+        <td>
+        <center>
+                    <p><audio preload="auto" controls="controls">
+                    <source src="content/sounds/speedboat-sa.mp3" type="audio/mpeg">
+                    </audio></p>
+        </center>
+        </td>
+        <td>Localization of SRKW calls</td>
+        </tr>
+        <tr>
+                    <td width="50%"><img src="content/speakingUpGraph.png" width="489" height="365" alt=""></td>
+                    <td width="50%"><img src="content/speakingUpGraph.png" width="489" height="365" alt=""></td>
+        </tr>
+        <tr>
+          <td> 2009: SRKWs "speak up" in noise from nearby boats (Holt, Noren, Veirs, Emmons & Veirs)</td>
+          <td align="center">Link to animation of call/response animation (cite Veirs, Wood, etc.)</td>
+        </tr>
+      </table>
+      </center>
+      <p>
+    </section>
+
+
+<section class="slide">
+        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
+	<h5>Evolution of machine learning (from edge to cloud and back again?)</h2>
+<table>
+<col style="width:40%">
+<col style="width:40%">
+<tr>
+<td><img src="content/wholistener.png"><br>
+</td>
+<td><b>Emerging SRKW ML:</b>
+  <ul>
+  <li>
+  <li>
+  </ul>
+</td>
+</tr>
+<tr>
+<td>
+        <img src="content/zorbita.png">
+</td>
+<td>
+Add image from Erica youtube or Akash?
+</td>
+</tr>
+</table>
+<center>
+<p>Admiralty Inlet study (unpublished) -- Of 22 SRKW transits during local daytime, <br>
+humans detect 45%, Wholistener 64%, combined 77%.</P>
+</center>
+</section>
+
+
+    <section class="slide">
+        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
+        <h5>Synergy of sighting and listening networks</h5>
+        <center>
+        <table>
+        <col style="width:50%">
+        <col style="width:50%">
+          <tr align="center">
+            <td><img src="content/" height="400" hspace="10"></td>
+            <td><img src="content/" height="400" hspace="10"></td>
+          </tr>
+        </table>
+        </center>
+    </section>
+
+
+    <section class="slide">
+        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
+        <h5>Many apps & initiatives emerging to gather and share real-time marmam data</h5>
+        <center>
+        <table>
+        <col style="width:50%">
+        <col style="width:50%">
+          <tr align="center">
+            <td><img src="content/" height="400" hspace="10"></td>
+            <td><img src="content/" height="400" hspace="10"></td>
+          </tr>
+        </table>
+        </center>
+    </section>
+
+
+
+    <section class="slide">
+        <center>
+                <h2></h2>
+                <h5></h5>
+                <center>
+                <img src="content/">
+                </center>
+    </section>
+
+
+
+    <section class="slide">
+        <center>
+                <h2></h2>
+                <h5></h5>
+                <center>
+                <img src="content/">
+                </center>
+    </section>
+
+    <section class="slide">
+      	<center>
+	      	<h2></h2>
+		<h5></h5>
+		<center>
+	      	<img src="content/">
+  		</center>
+    </section>
+
+
+    <section class="slide">
+	<h2>Vessel noise mitigation</h2>
+     	<h5 text-align="center">There are many ways to "more than mitigate" vessel noise.</h5>
+	<center>
+	<table><tr><td width="50%">
+      	<img src="content/class-spectra.png" 
+	</td><td width="5%">
+	</td><td>
+      	<img src="content/preprint-3dB.png" 
+	</td></tr></table>
+	<p>
+         Operational (temporary) and technological (permanent)
+	</center>
+    </section>
+
+
+    <section class="slide">
+     <h2>Orcasound's network, new nodes and app</h2>
+	<center>
+     	<table>
+      	<tr>
+      	    <td	><img src="content/map-network.png" height="400" hspace="10"></td>
+            <td><img src="content/node-box.png" height="400" hspace="10"></td>
+            <td><img src="content/app-w-activity.png" height="400"></td>
+        </tr>
+    	</table>
+	</center>
+  	<h3>15 years of citizen scientists listening for whales in the Salish Sea</h3>
+  	<div>
+   	Thanks to all the backers of the <a href="https://www.kickstarter.com/projects/sveirs/orcasound-listen-for-whales">2017 Kickstarter</a>, plus our app key developers/designers to date:<br>
+   	Paul Cretu, Skander Mzali, Steve Hicks, Tyler Crisafulli, Nóra Mészáros, and Liam Reese<br>
+   	<center>
+   	<h4><a href="http://live.orcasound.net">Listen for whales at live.orcasound.net!</a></h4>
+	</center>
+	</div>
+    </section>
+
+
+    <section class="slide">
+	<h2>Listen for whales</h2>
+
+   	<center>
+   	<h4>For free live-listening, browse to:<br><a href="http://live.orcasound.net">live.orcasound.net</a></h4>
+
+        <table>
+	<col style="width:50%">
+	<col style="width:25%">
+	<col style="width:25%">
+      	  <tr align="center">
+            <td><img src="content/screenshot-live-tall.png" height="400" hspace="10"></td>
+            <td><img src="content/v2-calls.png" height="400"></td>
+            <td><img src="content/v2-button.png" height="400"></td>
+          </tr>
+        </table>
+	</center>
+	<p> New player was released to the public on November 1.  Stay tuned for more features coming this summer at:
+<a href="http://beta.orcasound.net">beta.orcasound.net</a></p>
+    </section>
+
+    <section class="slide">
+	<h2>Questions?</h2>
+    </section>
+
 
 
     <section class="slide">
@@ -185,68 +593,6 @@
      </table>
     </section>
 
-    <section class="slide">
-	<h2>Vessel noise mitigation</h2>
-     	<h5 text-align="center">There are many ways to "more than mitigate" vessel noise.</h5>
-	<center>
-	<table><tr><td width="50%">
-      	<img src="content/class-spectra.png" 
-	</td><td width="5%">
-	</td><td>
-      	<img src="content/preprint-3dB.png" 
-	</td></tr></table>
-	<p>
-         Operational (temporary) and technological (permanent)
-	</center>
-    </section>
-
-
-    <section class="slide">
-     <h2>Orcasound's network, new nodes and app</h2>
-	<center>
-     	<table>
-      	<tr>
-      	    <td	><img src="content/map-network.png" height="400" hspace="10"></td>
-            <td><img src="content/node-box.png" height="400" hspace="10"></td>
-            <td><img src="content/app-w-activity.png" height="400"></td>
-        </tr>
-    	</table>
-	</center>
-  	<h3>15 years of citizen scientists listening for whales in the Salish Sea</h3>
-  	<div>
-   	Thanks to all the backers of the <a href="https://www.kickstarter.com/projects/sveirs/orcasound-listen-for-whales">2017 Kickstarter</a>, plus our app key developers/designers to date:<br>
-   	Paul Cretu, Skander Mzali, Steve Hicks, Tyler Crisafulli, Nóra Mészáros, and Liam Reese<br>
-   	<center>
-   	<h4><a href="http://live.orcasound.net">Listen for whales at live.orcasound.net!</a></h4>
-	</center>
-	</div>
-    </section>
-
-
-    <section class="slide">
-	<h2>Listen for whales</h2>
-
-   	<center>
-   	<h4>For free live-listening, browse to:<br><a href="http://live.orcasound.net">live.orcasound.net</a></h4>
-
-        <table>
-	<col style="width:50%">
-	<col style="width:25%">
-	<col style="width:25%">
-      	  <tr align="center">
-            <td><img src="content/screenshot-live-tall.png" height="400" hspace="10"></td>
-            <td><img src="content/v2-calls.png" height="400"></td>
-            <td><img src="content/v2-button.png" height="400"></td>
-          </tr>
-        </table>
-	</center>
-	<p> New player was released to the public on November 1.  Stay tuned for more features coming this summer at:
-<a href="http://beta.orcasound.net">beta.orcasound.net</a></p>
-    </section>
-
-    <section class="slide">
-	<h2>Questions?</h2>
-    </section>
 
     <section class="slide">
 	<h2>Maximizing near-term SRKW acquisition of Chinook salmon</h2>
@@ -273,7 +619,6 @@
 		</ol>
 	</td> </tr> </table>
     </section>
-
 
     <!-- End slides. -->
 
