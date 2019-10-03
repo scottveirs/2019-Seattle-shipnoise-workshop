@@ -89,6 +89,7 @@
 		<li>Other cabled, real-time hydrophone assets in the Northeast Pacific
 			<ol>
 			<li>Canadian whale tracking infrastructure ($10M ONC; DFO, ECHO, SIMRES++)	
+			<li>Lime Kiln Lighthouse - SMRU and The Whale Museum
 			<li>Outer coast U.S. assets ($100M investments: e.g OOI Newport node, MARS, U.S. Navy)
 			</ol>
 		<li>Autonomous recorders or other non-real-time hydrophones
@@ -96,8 +97,8 @@
 			<li>Critical habitat NOAA assets (PALs, EARS, etc.)
 			<li>Many past deployments in SRKW habitat (APL/PALs, MARUs, HARPs, JASCO/SMRU, SoundTraps, etc.)
 			</ol>
-		<li>Other real-time sources of SRKW detections and/or non-cabled audio: wavegliders (humpbacks); SMRU CABs; Canadian radar, thermal cameras
-		<li>Vast and growing network of Salish Sea marine sensors, e.g. gliders (NANOOS/NVS)
+		<li>Other real-time sources of SRKW detections and/or non-cabled audio: wavegliders (humpbacks); SMRU CABs; Canadian radar, BC thermal cameras
+		<li>Vast and growing network of Salish Sea marine sensors, e.g. acoustic gliders (<a href="http://nvs.nanoos.org">NANOOS/NVS</a>)
 		</ul>
 </td>
 <td>
@@ -146,7 +147,7 @@
 <li> Friends of Lime Kiln Society (FOLKS)	
 <li> Cetacean Research Technology	 
 </ol>
-<p>5 physical exhibits: </b> Seattle Aquarium; Port Townsend Marine Science Center; Langley Whale Center; Lime Kiln Visitor's Center (via FOLKS)</p>
+<p>Physical exhibits include: </b> Seattle Aquarium; Port Townsend Marine Science Center; Langley Whale Center; Lime Kiln Visitor's Center (via FOLKS)</p>
 </td>
 <td>
 <center>
@@ -162,11 +163,13 @@
 
     <section class="slide">
                 <h2>Orcasound hardware evolution</h2>
-                <h5>A hydrophone node for less than $1000 (U.S.)!</h5>
-<p>Basic ingredients (and costs):</p>
+                <h5>A listening node for less than $1000 (U.S.)!</h5>
 <table>
+        <col style="width:70%">
+        <col style="width:30%">
 <tr>
 <td>
+<p>Basic ingredients (and costs):</p>
  	<ul>
                 <li>($ 50) DIY stand</li>
                 <li>($300 x2) Hydrophones -- dual for redundancy, stereo listening, & bearing</li>
@@ -179,7 +182,10 @@
 
 <p><a href="http://www.orcasound.net/2018/04/27/orcasounds-new-live-audio-solution-from-hydrophone-to-headphone-with-a-raspberry-pi-computer-and-hls-dash-streaming-software/">DIY Guide: How to build your own hydrophone node!</a>
 </td>
-        <td><img src="content/node-box.png" height="400"></td>
+        <td>
+		<img src="content/node-box.png" width="200">
+		<img src="content/hydro-stand.png" width="300">
+	</td>
 </tr>
 </table>
     </section>
@@ -228,12 +234,12 @@
           </tr>
         </table>
         </center>
-        <p> Orcasound 1.0 player published Nov. 1, 2018. Orcasound 2.0 is in beta-testing and expected to go live in fall, 2019.</p>
+        <p> Orcasound 1.0 player published Nov. 1, 2018. Orcasound 2.0 is in beta-testing & will launch in fall, 2019.</p>
     </section>
 
     <section class="slide">
 	<h2>Orcasound for characterizing vessel noise</h2>
-	<h5>Vessel noise can mask <b><u>both</u></b> calls &amp; clicks</h5>
+	<h5>The bad news: Vessel noise can mask <b><u>both</u></b> calls &amp; clicks</h5>
       <table>
         <tr>
           <td width="50%">
@@ -263,7 +269,7 @@
 
     <section class="slide">
         <h2>Vessel noise mitigation</h2>
-        <h5 text-align="center">There are many ways to "more than mitigate" vessel noise.</h5>
+        <h5 text-align="center">The good news: there are many ways to "more than mitigate" vessel noise.</h5>
         <center>
         <table><tr><td width="50%">
         <img src="content/class-spectra.png"
@@ -284,23 +290,35 @@
         </section>
 
         <section class="slide">
-          <h2>Peak validation example</h2>
-          <h5>Compared to fast boats, slow ones have lower maxima, and sometimes last longer</h5>
+          <h2>Validating noise peaks & speed with AIS, cameras, and radar</h2> 
+          <h5>Slow boats have lower maxima, but usually last longer than fast boats...</h5>
           <img src="content/9_27_8am.jpg">
-          <p>Images from the U.Vic./<a href="http://www.orcasound.net/portfolio/salish-sea-vessel-research/">NEMES automated camera at Orcasound Lab</a>; Smooth curve (black) is 1200-second running average broadband dB level</p>
+          <p>Images from the U.Vic./<a href="http://www.orcasound.net/portfolio/salish-sea-vessel-research/">NEMES automated camera at Orcasound Lab</a>. Smooth curve (black) is 1200-second running average broadband dB level. Now also tracking boat type & speed with <a href="https://protectedseas.net/marine-monitor-m2">M2</a> AIS/radar/camera system.</h2>/p>
         </section>
 
        <section class="slide">
-        <h2>Proposal for new acoustic metrics</h2>
-        <h3>Urban ambient noise level: a baseline for "delta" noise metrics for SRKWs</h3>
-        <img src="content/dBmaxVS_width.jpg">
+        <h2>Monitoring ship noise in SRKW habitat</h2>
+        <h3>Urban ambient noise level: a baseline for "delta" noise metrics</h3>
+        <center>
+        <table><tr>
+	<td width="65%">
+	Maximum received noise level vs duration 
+        <img src="content/dBmaxVS_width.jpg"
         <p>From <a href="http://orcasound.net/data/talks/2018-asa-vveirs">ASA 2019 talk by V.Veirs</a> with ref. to <i>Holt et al., 2017, "Noise levels received by endangered killer whales..."</i></p>
+        </td>
+	<td width="5%">
+        </td>
+	<td width="30%">
+	<p>Monitoring aircraft noise in Seattle</p>
+        <img src="content/aircraft-noise-monitor-map.jpg">
+        </td></tr></table>
+        </center>
         </section>
 
 
     <section class="slide">
-        <h2>Orcasound: partner in tracking Salish Sea wildlife</h2>
-        <h5><u>Together</u> we can detect and protect SRKW (with cool tech, like... Localization)</h5>
+        <h2>Orcasound: as a partner in tracking SRKWs</h2>
+        <h5><u>Together</u> we can detect & protect SRKW (with cool tech, like... Localization)</h5>
       <center>
       <table>
         <tr>
@@ -315,7 +333,9 @@
         </tr>
         <tr>
                     <td width="50%"><img src="content/speakingUpGraph.png" width="489" height="365" alt=""></td>
-                    <td width="50%"><iframe width="560" height="315" src="https://www.youtube.com/embed/U0Ue1zHK5ig" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                    <td width="50%">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U0Ue1zHK5ig?start=60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</td>
         </tr>
         <tr>
           <td> SRKWs "speak up" in noise from nearby boats <br>(<a href="https://www.researchgate.net/publication/23952764_Speaking_up_Killer_whales_Orcinus_orca_increase_their_call_amplitude_in_response_to_vessel_noise">Holt, Noren, Veirs, Emmons & Veirs, 2009</a>)</td>
@@ -328,31 +348,27 @@
 
 
 <section class="slide">
-        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
-	<h5>Evolution of machine learning (from edge to cloud and back again?)</h2>
+        <h2>Orcasound for tracking SRKWs</h2>
+	<h5>Cool tech: machine learning</h2>
+<center>
 <table>
 <col style="width:40%">
 <col style="width:40%">
 <tr>
-<td><img src="content/wholistener.png"><br>
+<td>&nbsp;<img src="content/machine-learning.png">
 </td>
-<td><b>Emerging SRKW ML:</b>
+<td><h6>Emerging orca AI (in real-time?):</h6>
   <ul>
-  <li>
-  <li>
+  <li> Orcasound's archive of train/test data
+  <li> Orcasound collaboration with UW and Microsoft with Dr. David Bain 
+  <li> Ocean Networks Canada workshops in November
+  <li> Meridian's Keta (open-source)
+  <li> ORCA-SPOT (trained on Orca Lab NRKW calls) 
+  <li> DFO+Google?
   </ul>
 </td>
 </tr>
-<tr>
-<td>
-        <img src="content/zorbita.png">
-</td>
-<td>
-Add image from Erica youtube or Akash?
-</td>
-</tr>
 </table>
-<center>
 <p>Admiralty Inlet study (unpublished) -- Of 22 SRKW transits during local daytime, <br>
 humans detect 45%, Wholistener 64%, combined 77%.</P>
 </center>
@@ -360,15 +376,27 @@ humans detect 45%, Wholistener 64%, combined 77%.</P>
 
 
     <section class="slide">
-        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
-        <h5>Synergy of sighting and listening networks</h5>
+        <h2>Orcasound as a partner in tracking SRKWs</h2>
+        <h5>Synergy of real-time sighting and listening networks</h5>
         <center>
         <table>
         <col style="width:50%">
         <col style="width:50%">
-          <tr align="center">
-            <td><img src="content/" height="400" hspace="10"></td>
-            <td><img src="content/" height="400" hspace="10"></td>
+	  <tr>
+	    <td>
+&nbsp;
+<h6>Most recent SRKW "hearing"</h6>
+<ul>
+<li> Faint calls heard at Orcasound's Port Townsend & Bush Point nodes
+<li> Hearings anticipated through a heroic sighting effort of Orca Network & many Puget Sound citizen scientists
+<li> 9 continuous days tracked in Sept, 2019!
+</ul>
+		<img src="content/on-fb-post.png" hspace="10">
+		<img src="content/on-community.png" hspace="10">
+	    </td>
+            <td align="center">
+		<img src="content/orcamap-exit.png" hspace="10">
+	    h</td>
           </tr>
         </table>
         </center>
@@ -376,15 +404,22 @@ humans detect 45%, Wholistener 64%, combined 77%.</P>
 
 
     <section class="slide">
-        <h2>Orcasound as partner in tracking Salish Sea wildlife</h2>
-        <h5>Many apps & initiatives emerging to gather and share real-time marmam data</h5>
+        <h2>Orcasound for tracking SRKWs</h2>
+        <h5>Cool tech: new apps to help track marine life</h5>
         <center>
         <table>
         <col style="width:50%">
         <col style="width:50%">
-          <tr align="center">
-            <td><img src="content/" height="400" hspace="10"></td>
-            <td><img src="content/" height="400" hspace="10"></td>
+          <tr>
+            <td align="center"><p><a href="">Happy Whale</a></p><img src="content/scratchy-zoom.png" height="400" hspace="10"><p>Upload a fluke photo; AI yields an ID!</p></td>
+	    <td>
+ 
+	<p>Members of the PSEMP Marine Mammal Work Group, and organizational members of Orcasound, will continue to study, test, and develop these apps and other pioneering ways to share marine mammal location data within Washington and across the Salish Sea.</p>
+
+<p><a href="https://www.eventbrite.com/e/puget-sound-spatial-ecology-workshop-registration-72991697131">PSEMP Spatial Data Workshop</a>, Oct. 31, Edmonds</p>
+
+<p>Through 2019, Orcasound 2.0 plans to provide real-time detections of SRKWs to the WRAS.</p> 
+	    </td>
           </tr>
         </table>
         </center>
@@ -419,71 +454,6 @@ humans detect 45%, Wholistener 64%, combined 77%.</P>
                 <img src="content/">
                 </center>
     </section>
-
-
-    <section class="slide">
-	<h2>Vessel noise mitigation</h2>
-     	<h5 text-align="center">There are many ways to "more than mitigate" vessel noise.</h5>
-	<center>
-	<table><tr><td width="50%">
-      	<img src="content/class-spectra.png" 
-	</td><td width="5%">
-	</td><td>
-      	<img src="content/preprint-3dB.png" 
-	</td></tr></table>
-	<p>
-         Operational (temporary) and technological (permanent)
-	</center>
-    </section>
-
-
-    <section class="slide">
-     <h2>Orcasound's network, new nodes and app</h2>
-	<center>
-     	<table>
-      	<tr>
-      	    <td	><img src="content/map-network.png" height="400" hspace="10"></td>
-            <td><img src="content/node-box.png" height="400" hspace="10"></td>
-            <td><img src="content/app-w-activity.png" height="400"></td>
-        </tr>
-    	</table>
-	</center>
-  	<h3>15 years of citizen scientists listening for whales in the Salish Sea</h3>
-  	<div>
-   	Thanks to all the backers of the <a href="https://www.kickstarter.com/projects/sveirs/orcasound-listen-for-whales">2017 Kickstarter</a>, plus our app key developers/designers to date:<br>
-   	Paul Cretu, Skander Mzali, Steve Hicks, Tyler Crisafulli, Nóra Mészáros, and Liam Reese<br>
-   	<center>
-   	<h4><a href="http://live.orcasound.net">Listen for whales at live.orcasound.net!</a></h4>
-	</center>
-	</div>
-    </section>
-
-
-    <section class="slide">
-	<h2>Listen for whales</h2>
-
-   	<center>
-   	<h4>For free live-listening, browse to:<br><a href="http://live.orcasound.net">live.orcasound.net</a></h4>
-
-        <table>
-	<col style="width:50%">
-	<col style="width:25%">
-	<col style="width:25%">
-      	  <tr align="center">
-            <td><img src="content/screenshot-live-tall.png" height="400" hspace="10"></td>
-            <td><img src="content/v2-calls.png" height="400"></td>
-            <td><img src="content/v2-button.png" height="400"></td>
-          </tr>
-        </table>
-	</center>
-	<p> New player was released to the public on November 1.  Stay tuned for more features coming this summer at:
-<a href="http://beta.orcasound.net">beta.orcasound.net</a></p>
-    </section>
-
-    <section class="slide">
-	<h2>Questions?</h2>
-    </section>
-
 
 
     <section class="slide">
@@ -540,112 +510,6 @@ humans detect 45%, Wholistener 64%, combined 77%.</P>
       </table>
     </section>
 
-
-    <section class="slide">
-      <center>
-      <h2>We know: SRKWs respond to noise</h2>
-      <table>
-        <tr>
-        <td>2003: U.S. Navy uses sonar in Haro Strait with SRKW behavior change observed by Center for Whale Research</td>
-        <td>
-	<center>
-                    <p><audio preload="auto" controls="controls">
-                    <source src="content/sounds/speedboat-sa.mp3" type="audio/mpeg">
-                    </audio></p>
-	</center>
-        </td>
-        </tr>
-		    <tr>
-		    <td width="50%"><img src="content/shoup.jpg" width="489" height="365" alt=""></td>
-		    <td width="50%"><img src="content/speakingUpGraph.png" width="489" height="365" alt=""></td>
-		    </tr>
-        <tr>
-          <td align="center"><audio src="content/sounds/sonar-shoup-2003.mp3" controls="true"></audio></td>
-          <td> 2009: SRKWs "speak up" in noise from nearby boats (Holt, Noren, Veirs, Emmons & Veirs)</td>
-        </tr>
-      </table>
-      </center>
-      <p>
-    </section>
-
-    <section class="slide">
-      <h2>Vessel noise can mask <b><u>both</u></b> calls &amp; clicks</h2>
-      <table>
-        <tr>
-          <td width="50%">
-            <img src="content/peerJ_RL.png" width="600" align="left">
-            <h4>Frequencies of vessel noise overlap <br>with SRKW hearing and signals</h4>
-	    <center>
-            <p>Veirs, Veirs, & Wood (<a href="https://peerj.com/articles/1657/">2016, PeerJ</a>)</p>
-	    <p>Typical ship: 
-		<audio preload="auto" controls="controls">	
-                    <source src="content/sounds/ship-clattering.mp3" type="audio/mpeg">
-             	</audio>
-	    </p>
-	    </center>
-         </td>
-         <td>
-            <img src="content/freq-fig.jpg">
-	    <p>Squeaky ship:
-		<audio preload="auto" controls="controls">
-                    <source src="content/sounds/squeaky-ship.mp3" type="audio/mpeg" title="squeaky ship">
-             	</audio>
-	    </p>
-         </td>
-       </tr>
-     </table>
-    </section>
-
-    <section class="slide">
-      <h2>Vessel noise can mask <b><u>both</u></b> calls &amp; clicks</h2>
-      <table>
-        <tr>
-         <td>
-           <img src="content/macgillivray+2016.png" align="right">
-           <h4>It's already too loud!</h4>
-           <ol>
-             <li> Communication space reduced: 75% for NRKWs (Miller+2006); 94-98% for SRKW by Haro ships (<a href="https://prezi.com/7r0hski1h_2l/masking-of-southern-resident-killer-whale-signals-by-commercial-ship-noise/?webgl=0">Veirs+2011</a>)
-	     <li> Current levels of Salish Sea noise caused 62-97% loss of communication space (Williams et al., 2014)
-             <li> Foraging space reduced 58-89% by Haro ships (<a href="https://prezi.com/7r0hski1h_2l/masking-of-southern-resident-killer-whale-signals-by-commercial-ship-noise/?webgl=0">Veirs+2011</a>)
-             <li> 85% decrease in echolocation range in container ship noise at 440 meters (Holt, 2008)
-          </ol>
-          <h4>We also know:</h4>
-          <ol>
-            <li> Ships dominate the Haro Strait soundscape
-            <li> Ships transit Haro Strait ~20 times/day
-            <li> Boats elevate mean ambient noise levels ~2 dB during summer
-         </ol>
-         </td>
-       </tr>
-     </table>
-    </section>
-
-
-    <section class="slide">
-	<h2>Maximizing near-term SRKW acquisition of Chinook salmon</h2>
-	<table><tr><td>
-	<h3>Supply</h3>
-	Long-term:
-		<ol>
-		<li>Habitat</li>
-		<li>Hydropower</li>
-		<li>Hatcheries</li>
-		<li>Heat</li>
-		</ol>
-	Short-term:
-		<ol>
-		<li>Harvest! Commercial; recreational; tribal; Canadian; Alaskan; N Pacific!?</li>
-		<li>...</li>
-		</ol>
-	</td>
-	<td>
-	<h3>Access</h3>
-		<ol>
-		<li>Decrease masking of echolocation (minimize cavitation [and echosounders?] in all vessels)</li>
-		<li>Decrease masking of communication calls during foraging</li>
-		</ol>
-	</td> </tr> </table>
-    </section>
 
     <!-- End slides. -->
 
